@@ -5,7 +5,21 @@ on:
     #types: [opened, closed]
     types:
       - opened
+    branches:
+      - main
+      #- 'dev-*' #all branches that start with dev-
+      #- 'feat/**' #all branches like those feat/new feat/new/button
+      - dev
   workflow_dispatch:
+    # event filters
+  push:
+    branches:
+      - main
+      #- 'dev-*' #all branches that start with dev-
+      #- 'feat/**' #all branches like those feat/new feat/new/button
+      - dev
+    paths-ignore:
+      - ".github/workflows/*"
 jobs:
   deploy:
     runs-on: ubuntu-latest
