@@ -19,7 +19,7 @@ on:
       #- 'feat/**' #all branches like those feat/new feat/new/button
       - dev
     paths-ignore:
-      - ".github/workflows/*"
+      - ".github/workflows/*.yml"
 jobs:
   deploy:
     runs-on: ubuntu-latest
